@@ -1,0 +1,17 @@
+<%= form_with model: @procedure , url: category_path do |form| %>
+
+
+   <div >
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div >
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div >
+    <%= form.submit %>
+  </div>
+  <% end %>
