@@ -75,6 +75,11 @@ expenses-tracker-app** is a Ruby on Rails application...
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link]()
+<!-- video presentation -->
+
+## 🚀 Video prasentation <a name="live-demo"></a>
+
+- [Video Link](https://www.loom.com/share/b251b46a95b941deaf28b1aee3230c13)
 
 <!-- GETTING STARTED -->
 
