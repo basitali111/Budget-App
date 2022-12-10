@@ -1,4 +1,7 @@
-
+<div class= "signup-container">
+  <div class="actions">
+  <%= link_to "< Back ", categorys_path, :class=> "back-btn" %>
+  </div>
 <%= form_with model: @category, url: categorys_path, html: { class: "form-logged-in" } do |form| %>
 <%= link_to categorys_path do %>
   <i class="fa-solid fa-circle-chevron-left back-icon "></i>

@@ -3,6 +3,7 @@ class ProceduresController < ApplicationController
 
   def new
     @procedure = Procedure.new
+    @category = Category.find(params[:category_id])
   end
 
   def create
