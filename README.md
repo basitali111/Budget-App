@@ -56,7 +56,7 @@ expenses-tracker-app** is a Ruby on Rails application...
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>Database </summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
