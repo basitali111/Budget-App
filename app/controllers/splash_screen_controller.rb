@@ -1,5 +1,5 @@
 class SplashScreenController < ApplicationController
-    def index
-        redirect_to categories_url if user_signed_in?
-      end
+  skip_before_action :authenticate_user!
+
+  def index; end
 end

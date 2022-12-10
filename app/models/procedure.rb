@@ -1,4 +1,4 @@
 class Procedure < ApplicationRecord
-    has_and_belongs_to_many :categories
-    belongs_to :user
+  belongs_to :author, class_name: 'User'
+  belongs_to :category
 end

@@ -1,0 +1,49 @@
+
+<%= form_with model: @category, url: categorys_path, html: { class: "form-logged-in" } do |form| %>
+<%= link_to categorys_path do %>
+  <i class="fa-solid fa-circle-chevron-left back-icon "></i>
+<% end %>
+<%# # Showing error messages for validations %> 
+  <% if @category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% @category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+     <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+   <p> <%= msg %> </p>
+  </div>
+<% end %>
+
+       <div class="container-login">
+        <div class="row">
+          <div class="col-25">
+              <%= form.label :name%>
+            </div>
+           <div class="col-75">
+             <%= form.text_field :name %>
+           </div>
+          </div>
+       
+     <div>
+        <div class="row">
+          <div class="col-25">
+    <%= form.label :icon, 'Select a category:' %> <br/>
+            </div>
+               <div class="col-75">
+          <%= form.select :icon,[['🎲'], ['🚘'], ['🛒'], ['🍕'], ['📚'], ['🎞️'], ['🎶'], ['🍎'], ['👾'], ['✍🏽'], ['🏃🏽'], ['❤️'], ['⭐'], ['🐶'], ['🌳'], ['🌎'], ['🌙'], ['💧'], ['☀️'], ['🌹'], ['🏈'], ['🥊'], ['✈️'], ['🏕️'], ['🚲'], ['🔨'], ['📆'], ['📎'], ['🔒'], ['📌'], ['✂️'], ['🕙'], ['🧹']] %>
+    </div>
+  </div>
+
+   <div class="row">
+    <%= form.submit "Add category", class: 'add-category-btn' %>
+   </div>
+ </div>
+<% end %>

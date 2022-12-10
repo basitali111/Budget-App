@@ -1,0 +1,33 @@
+<div>   
+<div class= "signup-container">
+  <div class="actions">
+  <div>
+    <div class="menu"></div>
+    <div class="menu"></div>
+    <div class="menu"></div>
+  </div>
+  <h3 class="register-btn">Categories</h3>
+     <p>search</p>
+  </div>
+</div>
+  <%= link_to 'Add category', new_category_path, class: 'add-category' %>
+  <div class="category-index-container"> 
+  <h1 class="welcome">Welcome <%= current_user.name %>!</h1>
+   <div class="total-index">
+      <p>TOTAL MONEY SPENT</p>
+      <p> $<%= Procedure.sum(:amount)  %> </p>
+   </div>
+ <div class="category-index">
+      <% @categorys.each do |category| %>
+  
+   <div class="category-box">
+     <div class="flex">
+      <p class="category-image"> <%= category.icon %> </p>
+      <p class="category-icon"> <%= link_to category.name.capitalize, category_path(category),:class=>"name-link" %> </p>
+     </div>
+    <p class="category-amount"> $<%= category.procedures.sum(:amount) %> </p>
+      </div>
+ 
+      <% end %>
+      </div>
+</div>

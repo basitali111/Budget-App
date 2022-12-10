@@ -13,3 +13,370 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* .welcome-tilte{
+ display: flex;
+
+ flex-direction: column;
+ align-content: center;
+
+} */
+h2 {
+  text-align: center;
+  margin-top: 240px;
+  margin-bottom: auto;
+  text-shadow: 0.1875rem 0.125rem 0 rgb(0 0 0 / 30%);
+  font-family: cursive;
+  letter-spacing: 0.0625rem;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.welcome-buttons {
+  text-align: center;
+  margin-top: 240px;
+}
+
+.welcome-login {
+  position: relative;
+  background-color: #3778c2;
+  border: none;
+  font-size: 1.75rem;
+  color: #fff;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-right: 8.8125rem;
+  padding-left: 9.5rem;
+  width: 12.5rem;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.welcome-login::after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-left: 350%;
+  margin-left: -1.25rem !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.welcome-login:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.welcome-signup {
+  position: relative;
+  font-size: 1.75rem;
+  color: #120909;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-right: 8.9375rem;
+  padding-left: 8.4375rem;
+  width: 12.5rem;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid black;
+}
+
+.welcome-signup::after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-left: 350%;
+  margin-left: -1.25rem !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.welcome-signup:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.signip-btn {
+  margin-top: 3.9375rem;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.75rem;
+}
+
+.register-btn {
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+}
+
+.signup-btn {
+  background: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.25rem;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1875rem;
+}
+
+.Name-input {
+  font-family: 'Times New Roman', Times, serif;
+  padding-right: 14.125rem;
+  margin-left: 0.75rem;
+  border-right-style: none;
+  border-top-style: none;
+  border-left-style: none;
+  padding-top: 1.25rem;
+  padding-bottom: 0.3125rem;
+  padding-left: 0.375rem;
+}
+
+.field {
+  margin-top: 1.4375rem;
+}
+
+.check-btn {
+  margin-top: 1.25rem;
+  margin-left: 1.0625rem;
+}
+
+.welcome {
+  position: relative;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 5rem;
+  text-transform: capitalize;
+  background-image:
+    linear-gradient(
+      to right,
+      #669dde,
+      #5e96d9,
+      #558fd4,
+      #4d88ce,
+      #4481c9,
+      #3f7cc4,
+      #3977be,
+      #3472b9,
+      #326eb2,
+      #306aab,
+      #2f66a5,
+      #2d629e
+    );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.add-category {
+  text-decoration: none;
+  padding: 0.625rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 0.1875rem;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  text-transform: capitalize;
+}
+
+.container-login {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 3px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15rem;
+}
+
+.col-25 {
+  float: left;
+  width: 28%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  width: max-content;
+}
+
+.select {
+  padding-right: 126px;
+  padding-top: 9px;
+}
+
+.add-category-btn {
+  text-decoration: none;
+  padding: 0.625rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 0.1875rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.category-box {
+  display: flex;
+
+  /* flex-direction: column; */
+  border: 1px solid black;
+  padding: 12px;
+  position: relative;
+}
+
+.category-index {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 20px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  gap: 8px;
+}
+
+.category-icon {
+  text-decoration: none;
+  font-size: 21px;
+  align-self: center;
+}
+
+.name-link {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.category-image {
+  font-size: 59px;
+}
+
+.category-amount {
+  margin-left: 9rem;
+  margin-top: 2rem;
+}
+
+.total-index {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.category-show {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.text {
+  font-weight: bolder;
+  font-size: 25px;
+  align-self: center;
+}
+
+.category-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.category-trans {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.created-at {
+  margin-left: 21px;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-top: 1rem;
+  margin-right: 15px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.add-transaction {
+  text-decoration: none;
+  padding: 0.625rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #3778c2;
+  color: #fff;
+  border-radius: 0.1875rem;
+  text-transform: capitalize;
+  position: absolute;
+  top: 18rem;
+  left: 1rem;
+}
+
+.menu {
+  width: 27px;
+  height: 3px;
+  background-color: #fffdfd;
+  margin: 4px 0;
+}
