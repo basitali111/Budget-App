@@ -1,0 +1,54 @@
+<div class= "signup-container">
+  <div class="actions">
+  <%= link_to "< Back ", category_path(@category), :class=> "back-btn" %>
+  </div>
+<%= form_with model: @procedure, url: category_procedures_path, method: :post, html: { class: "form-logged-in" } do |form| %>
+<%= link_to categorys_path do %>
+  <i class="fa-solid fa-circle-chevron-left back-icon "></i>
+<% end %>
+<%# # Showing error messages for validations %> 
+  <% if @procedure.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@procedure.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% @procedure.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+     <%# # Showing error messages for failures with flash %> 
+  <% flash.each do |type, msg| %>
+  <div>
+   <p> <%= msg %> </p>
+  </div>
+<% end %>
+
+       <div class="container-login">
+        <div class="row">
+          <div class="col-25">
+              <%= form.label :name%>
+              </div>
+           <div class="col-75">
+             <%= form.text_field :name %>
+           </div>
+          </div>
+
+       
+     <div>
+       <div class="row">
+          <div class="col-25">
+              <%= form.label :amount%>
+            </div>
+           <div class="col-75">
+             <%= form.text_field :amount %>
+           </div>
+          </div>
+
+
+   <div class="row">
+    <%= form.submit "Add transaction", class: 'add-category-btn' %>
+   </div>
+ </div>
+<% end %>

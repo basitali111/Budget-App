@@ -1,0 +1,36 @@
+ <div class="category-show-container">
+<div class= "signup-container">
+  <div class="actions">
+  <%= link_to "< Back ", categorys_path, :class=> "back-btn" %>
+   <h3 class="register-btn">DETAILS</h3>
+  </div>
+  
+</div>
+    <%= link_to categorys_path do %>
+      <i class="fa-solid fa-circle-chevron-left back-icon"></i>
+    <% end %>
+
+   <div class="category-show">
+      <p class="category-icon"> <%= @category.icon %> </p>
+      <p class="text"> <%= @category.name.capitalize %> </p>
+   </div>
+
+    <div>
+        <% @category.procedures.each do |procedure| %>
+
+        <div class="category-detail">
+             <div class="category-trans">
+                <p> <%= procedure.name.capitalize %></p>
+                <p> $<%= procedure.amount %></p>
+             </div>
+              <p class="created-at"> <%=procedure.created_at%> </p>
+          </div>
+          <% end %>
+        <div class=" total-amount">
+           <p>TOTAL PAYMENT </p>
+           <p> $<%= @category.procedures.sum(:amount) %> </p>
+       </div>
+    </div>
+ 
+</div>
+<%= link_to 'New transaction',  new_category_procedure_path(@category), class: 'add-transaction' %> 
