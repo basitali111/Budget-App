@@ -21,9 +21,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 EXPENSES TRACKER APP <a name="about-project"></a>
+# 📖 Budget-App <a name="about-project"></a>
 
-> Expenses-tracker-app is an application that allows the user to:
+> Budget-App is an application that allows the user to:
 
 > - register and log in, so that the data is private to them.
 > - introduce new transactions associated with a category.
